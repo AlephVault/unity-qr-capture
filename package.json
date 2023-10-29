@@ -1,0 +1,16 @@
+{
+  "name": "com.alephvault.unity.qr-capture",
+  "version": "0.0.1",
+  "displayName": "Aleph Vault - Unity - QR Capture",
+  "description": "Utility to capture a QR code via UI.",
+  "unity": "2023.1",
+  "dependencies": {
+    "com.alephvault.unity.support": "0.0.1"
+  },
+  "author": {
+    "name": "Aleph Vault",
+    "email": "info@alephvault.com",
+    "url": "http://www.alephvault.com"
+  }
+}
+
