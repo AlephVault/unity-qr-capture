@@ -1,0 +1,4 @@
+{
+	"name": "AlephVault.Unity.QRCapture.Runtime",
+	"references":[ "GUID:9fb1e86edc1bf4f46bfc867526bca155" ]
+}

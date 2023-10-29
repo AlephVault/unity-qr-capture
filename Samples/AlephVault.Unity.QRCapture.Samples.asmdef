@@ -1,0 +1,16 @@
+{
+    "name": "AlephVault.Unity.QRCapture.Samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bfaf69b5ff8e1e0edb491da040e92b52"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
