@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f70a536646b1cb1b8046c9b31b6765f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 8234922868901149991}
+  captureTarget: {fileID: 8234922868901149991}
   captureTargetResolution: 1000
   scanButton: {fileID: 0}
   cancelButton: {fileID: 347288781481065593}

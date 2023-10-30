@@ -29,16 +29,15 @@ namespace AlephVault.Unity.QRCapture
                 private CanvasScaler scaler;
 
                 /// <summary>
-                ///   The background image. It MUST be a direct child.
+                ///   The target of the captured image. It MUST be a direct child.
                 /// </summary>
                 [SerializeField]
-                private RawImage background;
+                private RawImage captureTarget;
 
                 /// <summary>
                 ///   The resolution-side (i.e. {value}x{value}) of the
                 ///   capture target texture.
                 /// </summary>
-                [FormerlySerializedAs("scanZoneSize")]
                 [SerializeField]
                 private uint captureTargetResolution = 1000;
 
@@ -117,21 +116,21 @@ namespace AlephVault.Unity.QRCapture
                         );
                     }
 
-                    if (!background || background.transform.parent != transform)
+                    if (!captureTarget || captureTarget.transform.parent != transform)
                     {
                         Destroy(gameObject);
                         throw new InvalidOperationException(
-                            "The background must be set to a direct child of this QR Scanner"
+                            "The capture target must be set to a direct child of this QR Scanner"
                         );
                     }
-                    background.rectTransform.anchoredPosition = Vector2.zero;
-                    background.rectTransform.anchorMin = Vector2.zero;
-                    background.rectTransform.anchorMax = Vector2.one;
-                    background.rectTransform.sizeDelta = Vector2.zero;
-                    AspectRatioFitter backgroundFitter = background.GetComponent<AspectRatioFitter>() ??
-                                                         background.gameObject.AddComponent<AspectRatioFitter>();
-                    backgroundFitter.aspectRatio = 1;
-                    backgroundFitter.aspectMode = aspectMode;
+                    captureTarget.rectTransform.anchoredPosition = Vector2.zero;
+                    captureTarget.rectTransform.anchorMin = Vector2.zero;
+                    captureTarget.rectTransform.anchorMax = Vector2.one;
+                    captureTarget.rectTransform.sizeDelta = Vector2.zero;
+                    AspectRatioFitter captureTargetFitter = captureTarget.GetComponent<AspectRatioFitter>() ??
+                                                            captureTarget.gameObject.AddComponent<AspectRatioFitter>();
+                    captureTargetFitter.aspectRatio = 1;
+                    captureTargetFitter.aspectMode = aspectMode;
 
                     if (cancelButton)
                     {
@@ -156,7 +155,7 @@ namespace AlephVault.Unity.QRCapture
                             device.name, (int)captureTargetResolution, (int)captureTargetResolution
                         );
                         webcamTexture.Play();
-                        background.texture = webcamTexture;
+                        captureTarget.texture = webcamTexture;
                     }
                 }
                 
@@ -165,7 +164,7 @@ namespace AlephVault.Unity.QRCapture
                     if (webcamTexture != default)
                     {
                         int orientation = -webcamTexture.videoRotationAngle;
-                        background.rectTransform.localEulerAngles = new Vector3(0, 0, orientation);
+                        captureTarget.rectTransform.localEulerAngles = new Vector3(0, 0, orientation);
                     }
                 }
 
