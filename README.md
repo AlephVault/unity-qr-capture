@@ -11,9 +11,11 @@ To install this package you need to open the package manager in your project and
   2. Look for this package: `com.alephvault.unity.qr-capture`.
   3. Install it.
 
-Also, a compiled assembly is needed (e.g. into the project's Plugins/ directory) for this package to work:
+Also, three compiled assemblies are needed (e.g. into the project's Plugins/ directory) for this package to work:
 
   - zxing.unity.dll
+  - QRCoder.dll
+  - QRCoder.Unity.dll
 
 # Usage
 
