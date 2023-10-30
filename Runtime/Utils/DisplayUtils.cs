@@ -18,7 +18,7 @@ namespace AlephVault.Unity.QRCapture
             /// </summary>
             /// <param name="prefab">The prefab to use</param>
             /// <param name="text">The text to use</param>
-            public static async Task SetAndShow(QRDisplay prefab, string text)
+            public static async Task Display(QRDisplay prefab, string text)
             {
                 if (!prefab) return;
 

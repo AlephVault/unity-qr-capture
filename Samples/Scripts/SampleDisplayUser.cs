@@ -30,7 +30,7 @@ namespace AlephVault.Unity.QRCapture
 
             private async void CaptureButtonPressed()
             {
-                await DisplayUtils.SetAndShow(displayPrefab, displayText.text);
+                await DisplayUtils.Display(displayPrefab, displayText.text);
             }
         }
     }
