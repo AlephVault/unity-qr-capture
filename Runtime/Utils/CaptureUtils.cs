@@ -17,11 +17,6 @@ namespace AlephVault.Unity.QRCapture
         public static class CaptureUtils
         {
             /// <summary>
-            ///   Tells the authorization process was cancelled.
-            /// </summary>
-            public class AuthorizationCancelledException : Exception {}
-
-            /// <summary>
             ///   Performs a capture using either the clipboard or a prefab.
             ///   Only mobile devices make use of the prefab. Also, consoles
             ///   do NOT have a webcam, so they always return null here.
